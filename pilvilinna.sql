@@ -1,14 +1,9 @@
--- phpMyAdmin SQL Dump
--- version 5.2.1
--- https://www.phpmyadmin.net/
---
--- Host: 127.0.0.1
--- Generation Time: Jul 24, 2023 at 01:38 PM
--- Server version: 10.4.28-MariaDB
--- PHP Version: 8.2.4
-
+/* Siivotaan */
+DROP DATABASE IF EXISTS pilvilinna;
+DROP USER IF EXISTS 'pilvilinna'@'localhost';
+/* Luodaan */
 CREATE DATABASE pilvilinna;
-CREATE USER 'pilvilinna'@'localhost' IDENTIFIED BY 'your-password';
+CREATE USER 'pilvilinna'@'localhost' IDENTIFIED BY 'Kyberlinna!';
 GRANT ALL PRIVILEGES ON pilvilinna.* TO 'pilvilinna'@'localhost';
 FLUSH PRIVILEGES;
 

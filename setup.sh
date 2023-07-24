@@ -4,6 +4,8 @@
 sudo apt-get update
 sudo apt-get install -y apache2 php libapache2-mod-php php-mysql mariadb-server mariadb-client libapache2-mod-php
 
+# Viedään tietokanta-schema tietokantaan ja luodaan käyttäjä
+sudo mysql -u root < pilvilinna.sql
 # Asenna Composer
 sudo apt-get install -y curl php-cli php-mbstring git unzip
 cd ~
