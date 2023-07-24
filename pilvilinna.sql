@@ -7,6 +7,8 @@ CREATE USER 'pilvilinna'@'localhost' IDENTIFIED BY 'Kyberlinna!';
 GRANT ALL PRIVILEGES ON pilvilinna.* TO 'pilvilinna'@'localhost';
 FLUSH PRIVILEGES;
 
+USE pilvilinna;
+
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";

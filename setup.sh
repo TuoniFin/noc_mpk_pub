@@ -31,7 +31,7 @@ cd /var/www/api
 composer install
 
 cd /var/www/portal
-npm install
+sudo npm install
 
 # Käännä Pilvilinna Portaali
 sudo npm run build
