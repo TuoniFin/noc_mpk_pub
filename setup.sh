@@ -4,6 +4,10 @@
 sudo apt-get update
 sudo apt-get install -y apache2 php libapache2-mod-php php-mysql mariadb-server mariadb-client libapache2-mod-php
 
+# Kopioi Apache2 konfiguraatiot
+sudo cp ./Apache2/pilvilinna-api.conf /etc/apache2/sites-available/
+sudo cp ./Apache2/pilvilinna-portal.conf /etc/apache2/sites-available/
+
 # Viedään tietokanta-schema tietokantaan ja luodaan käyttäjä
 sudo mysql -u root < pilvilinna.sql
 # Asenna Composer
@@ -24,17 +28,14 @@ sudo mv pilvilinna-api /var/www/api
 sudo mv pilvilinna-portal /var/www/portal
 
 cd /var/www/api
-sudo composer install
+composer install
 
 cd /var/www/portal
-sudo npm install
+npm install
 
 # Käännä Pilvilinna Portaali
 sudo npm run build
 
-# Kopioi Apache2 konfiguraatiot
-sudo cp ./Apache2/pilvilinna-api.conf /etc/apache2/sites-available/
-sudo cp ./Apache2/pilvilinna-portal.conf /etc/apache2/sites-available/
 
 # Ota uudet sivustot käyttöön ja käynnistä Apache2 uudelleen
 sudo a2ensite pilvilinna-api
