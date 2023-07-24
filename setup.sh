@@ -2,7 +2,7 @@
 
 # Asenna Apache2 ja PHP
 sudo apt-get update
-sudo apt-get install -y apache2 php libapache2-mod-php php-mysql
+sudo apt-get install -y apache2 php libapache2-mod-php php-mysql mariadb-server mariadb-client libapache2-mod-php
 
 # Asenna Composer
 sudo apt-get install -y curl php-cli php-mbstring git unzip
