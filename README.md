@@ -1,6 +1,6 @@
 # Pilvilinna
 
-Pilvilinna on haavoittuva ohjelmisto opetustarkoituksiin. Älä käytä oikeissa ympäristöissä!
+Pilvilinna on haavoittuvaohjelmisto opetustarkoituksiin. Älä käytä oikeissa ympäristöissä!
 
 ## Asentaminen
 ```bash
